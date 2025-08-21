@@ -15,7 +15,7 @@ Note that f(n) = Θ(g(n)) -> Θ(g(n)) is a set of functions
 
 <span style="color:rgb(255, 192, 0)">This formal definition means that, if f(n) is Big theta of g(n) then, the value f(n) is always between c1 * g(n) and c2 * g(n) for large values of n(n >= n0).</span>
 
-![[Pasted image 20250812130859.png]]
+![](../img/20250812130859.png)
 
 To compute the theta notation, we must follow the next steps:
 
@@ -67,20 +67,20 @@ We divide by n + 1 because we have the n cases of the number we are looking for 
 
 We need to use the following formula:
 
-![[Pasted image 20250812133027.png]]
+![](../img/20250812133027.png)
 
 
 **HOW TO OBTAIN THE PREVIOSULY SHOWN**
 
-![[Pasted image 20250812134450.png]]
+![](../img/20250812134450.png)
 For our case we can do the previous simplification following the next steps(second inequation is the definition of big theta):
 
 
-![[Pasted image 20250812134608.png]]
+![](../img/20250812134608.png)
 
 Knowing the previous reasoning we can continue
 
-![[Pasted image 20250812134128.png]]
+![](../img/20250812134128.png)
 
 <span style="color:rgb(0, 176, 240)">Finally, if we remove the simplify -> Θ(n/2 + 1) = Θ(n) After removing constants and non highest terms.</span> 
 
@@ -101,6 +101,6 @@ c1 <= 1/2 - 3/n <= c2</span>
 <span style="color:rgb(145, 215, 232)">1/2 - 3/7 = 7/14 - 6/14 = 1/14(n = 7) As a result,</span> c1 <= 1/14 for n>= 7
 
 Therefore, we can verify that  1/2 n² - 3n = Θ(n²) as we have found constants c1 and c2 meeting the definition.
-![[Pasted image 20250814185452.png]]
+![](../img/20250814185452.png)
 
 Because the function increases we can take a given value of n and obtain its constant c and it is going to be valid for higher n's starting from that one

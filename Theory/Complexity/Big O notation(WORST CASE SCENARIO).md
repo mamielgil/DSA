@@ -248,8 +248,8 @@ f(n) = r(r-1)(r-2)*(2 + f(n-3)) + 2r² = r(r-1)(r-2)*2 + r(r-1)(r-2)f(n-3) =
 As a result, O(!n)
 ```
 
-![[Pasted image 20250811202537.png]]
+![](../img/20250811202537.png)
 
 EXAMPLES
 
-![[Pasted image 20250811202636.png]]
+![](../img/20250811202636.png)

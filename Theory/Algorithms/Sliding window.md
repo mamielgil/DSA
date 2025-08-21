@@ -20,22 +20,22 @@ Given a string s, find the length of the longest substring without repeting char
 Input = s = "abcabcbb"
 Output = 3
 
-1. Initially we set two pointers L(Left) and R(right) that start at the beginning.![[Pasted image 20250820183451.png]]
+1. Initially we set two pointers L(Left) and R(right) that start at the beginning.![](../img/20250820183451.png)
 2. We now<span style="color:rgb(255, 192, 0)"> look at if we need a specific data structure to help us handle the problem</span>. In our case, because we want to know which elements are in our window at a given time, and they cannot be repeated, we can use a set.
 	 set A = {1,2,3}         set B = {2,3,6,4}   NOT a set = {2,2,3,4,5,6,7}
 	 
 3.  We now start moving the pointers accordingly. We move R to the right until the window is not valid. In this case, we move the pointer R to the right until we reach a repeated letter. Every time, we find a non repeated letter, we increase the maximum length of the window that was found.
-![[Pasted image 20250820184015.png]]
+![](../img/20250820184015.png)
 
-4.  Once we move R and we reach a non valid value such as the following situation(letter "a" repeated): ![[Pasted image 20250820184053.png]]
+4.  Once we move R and we reach a non valid value such as the following situation(letter "a" repeated): ![](../img/20250820184053.png)
 We now move L to the right until the window is valid again.
-![[Pasted image 20250820184222.png]]
+![](../img/20250820184222.png)
 Now, we have reached a new valid window. Its length is the same as the previously detected one so it is not updated
 
 5.  As the window is again valid, we would start moving R again, reaching the following situation:
-![[Pasted image 20250820184506.png]]
+![](../img/20250820184506.png)
 Now the window would be invalid again (repeating b). Therefore, we would now start moving  L again until finding another valid interval.
-![[Pasted image 20250820184654.png]]
+![](../img/20250820184654.png)
 
 6. We would now keep moving R again upon finding a valid interval and repeat the process over and over and over. We would finish the whole process when R reaches the end of the array.
 
@@ -91,20 +91,20 @@ We need to find the maximum average subarray whose length is equal to k and retu
 For example: WE ARE GIVEN K = 4 AND ARRAY [1, 12, -5, -6, 50, 3]
 
 1. First we set the maximum_average value of the subarrays evaluated and the current_sum of the array.
-![[Pasted image 20250820191330.png]]
+![](../img/20250820191330.png)
 
 2.  We know build the first window of the given size. In order to do that we move the index i and increase the current_sum of the interval until we reach the value of k.
-![[Pasted image 20250820191437.png]]
+![](20250820191437.png)
 
 3. We now compute(for this problem), the current average of our window.
-![[Pasted image 20250820191524.png]]
+![](20250820191524.png)
 4. We now move the window mantaining the valid length. In order to do so, we would move to the right once adding that value to the current sum and then subtracting the value from the leftmost side.
 
-![[Pasted image 20250820191742.png]]
+![](../img/20250820191742.png)
 We updated the average as it was greater than the previously computed one.
 
 5. We  repeat this process until we have the rightmost index on the last element of the array so the algorithm finishes.
-![[Pasted image 20250820191928.png]]
+![](../img/20250820191928.png)
 
 ACTUALLY CUR_SUM += nums[i] - nums[i - k]
 

@@ -2,7 +2,7 @@
 # <span style="color:rgb(0, 176, 240)">Normal analysis</span>
 ## <span style="color:rgb(145, 215, 232)">Example 1. Insertion sort</span>
 
-![[Pasted image 20250814163941.png]]
+![](../img/20250814163941.png)
 In the following drawing we observe the time complexity analysis for each of the instructions. We take into account the following considerations:
 
 - <span style="color:rgb(255, 192, 0)">n = A.length</span>
@@ -15,13 +15,13 @@ The running time of the algorithm is the sum of running times for each statement
 
 TO COMPUTE T(n),the running time of INSERTION-SORT on an input of n values, we sum the products of the cost and times columns, obtaining the following:
 
-![[Pasted image 20250814164615.png]]
+![](../img/20250814164615.png)
 
 <span style="color:rgb(146, 208, 80)">Even for inputs of a given size, an algorithm's running time may depend on which input of that size is given. For example, in INSERTION-SORT, the best case occurs when the array is already sorted.</span> 
 
 <span style="color:rgb(146, 208, 80)">For each iteration of the for loop, we would go to the while loop and we would just execute its condition and determine that A</span>[j] <= <span style="color:rgb(146, 208, 80)">key in line 5. As a result, tj = 1 for every j. Knowing this, the best running time will be:</span>
 
-![[Pasted image 20250814165514.png]]
+![](../img/20250814165514.png)
 
 **THIS RESULT, CAN BE EXPRESSED AS an + b for constants a and b that depend on the statement costs ci; it is thus a linear function of n.**  <span style="color:rgb(146, 208, 80)">Therefore, Ω(n)</span>
 
@@ -29,16 +29,16 @@ The worst case scenario happens when we have the array sorted in reverse order, 
 
 We need to take into account the following formulas to develop the expression:
 
-![[Pasted image 20250814170147.png]]
+![](../img/20250814170147.png)
 
 EXPLANATION OF HOW THEY WERE OBTAINED:
-![[Pasted image 20250814170456.png]]
-![[Pasted image 20250814170508.png]]
+![](../img/20250814170456.png)
+![](../img/20250814170508.png)
 k = j -1; If j = n then k = n -1 that is why the summation gets transformed to n - 1 as upper limit.
 
 Knowing these, we obtain the following time function:
 
-![[Pasted image 20250814170612.png]]
+![](../img/20250814170612.png)
 
 This worst-case running time as an² + bn + c for constants a, b and c that again depend on the statement costs ci. It is a quadratic function. <span style="color:rgb(255, 0, 0)">Therefore, O(n²)</span>
 
@@ -53,7 +53,7 @@ This is considering the case in which we take an array in which the numbers are 
 
 When an algorithm contains a recursive call to itself, we can often<span style="color:rgb(145, 215, 232)"> describe its running time by a recurrence equation or recurrence,</span> which describes its the overall running time on a problem of size n in terms of the running time of smaller inputs. We can then use mathematical tools to solve the recurreence and provide bounds on the performance of the algorithm.
 
-![[Pasted image 20250814175059.png]]
+![](../img/20250814175059.png)
 
 <span style="color:rgb(145, 215, 232)">We let T(n) be the running time of a problem of size n. </span>If the problem size is small enough, say n <= c for some constant, the solution takes constant time, which we write as Θ(1).
 
@@ -61,7 +61,7 @@ If we suppose that our division of the problem yields a subproblems, each of whi
 
 Now,<span style="color:rgb(145, 215, 232)"> if we consider D(n)  time to divide the problem into subproblems and C(n) time to combine the solutions to the subproblems into the solution to the original problem, we get the following recurrence:</span>
 
-![[Pasted image 20250814175600.png]]
+![](../img/20250814175600.png)
 
 <span style="color:rgb(145, 215, 232)">TIME TO SOLVE a problems + TIME TO DIVIDE into subproblems + TIME TO MERGE -> aT(n/b) + D(n) + C(n)</span> 
 
@@ -72,7 +72,7 @@ FOR MERGE SORT SPECIFICALLY we need to consider the following:
 
 -<span style="color:rgb(0, 176, 240)"> Combine: </span>The merge procedure takes Θ(n)
 
-![[Pasted image 20250814180157.png]]
+![](../img/20250814180157.png)
 
 Notice that Θ(1)+Θ(n) = Θ(n) this is why in the second line Θ(1) is not shown.
 
