@@ -27,8 +27,6 @@ Output: 0
 1 <= nums[i] <= 104
  
 
-Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).
-
 # Explanation
 
 We have used the **sliding window approach with varible window length.**
@@ -41,10 +39,12 @@ Afterwards, we iterate through the whole array once, expanding the window toward
 
 **Finally** if we observe that the length was not updated during the execution that means that there was not valid window, so we return 0. **If there was a valid one**, we simply return the minimum length.
 
+# Time complexity
+
+The sliding window approach that I have followed, goes through each element of the array just once. As a result, it is: **T(n) = O(n)**
 
 # Space complexity
 
 Within the algorithm, we have used simple variables apart(R,L,minimum_length and cur_sum) from the vector that was provided as an argument that does not count for the space complexity.
 
 Therefore, **S(n) = O(1)**
-
