@@ -37,12 +37,11 @@ public:
           
             while(having >= needed){
 
-                if(having == needed){
-                    if(minimum_length > R - L + 1){
-                        minimum_length = R - L + 1;
-                        left_min = L;
-                        right_min = R;}
-                }  
+                if(minimum_length > R - L + 1){
+                    minimum_length = R - L + 1;
+                    left_min = L;
+                    right_min = R;}
+                 
                 if(letters_t.find(s[L]) != letters_t.end()){
                     letters_s[s[L]] --;
 
